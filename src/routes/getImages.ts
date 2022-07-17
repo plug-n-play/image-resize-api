@@ -3,7 +3,7 @@ import path from 'path';
 import resizeImage from '../resizeImage';
 import {Request, Response} from 'express';
 
-export default async (req: Request, res: Response) => {
+async function getImages (req: Request, res: Response): Promise<void> {
 	const filename = (req.query.filename as string) || '';
 	const width = req.query.width ? Number(req.query.width) : 0;
 	const height = req.query.height ? Number(req.query.height) : 0;
@@ -25,5 +25,6 @@ export default async (req: Request, res: Response) => {
 	} else {
 		res.sendStatus(404);
 	}
-
 }
+
+export default getImages;

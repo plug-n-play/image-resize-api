@@ -6,7 +6,7 @@ const port = 3000;
 app.get('/api/images', getImage);
 
 // Capture All 404 errors
-app.use(function (_, res) {
+app.use(function (_, res): void {
 	res.status(404).send('Unable to find the requested resource');
 });
 

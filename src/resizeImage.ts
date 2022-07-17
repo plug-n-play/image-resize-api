@@ -6,7 +6,7 @@ interface sharpParams {
 	height?: number;
 }
 
-export default async function resizeImage(imgName: string, transformedImageName: string, width: number, height: number) {
+export default async function resizeImage(imgName: string, transformedImageName: string, width: number, height: number): Promise<void> {
 	const filePath = path.resolve(`images/${imgName}.jpg`)
   try {
 		const params: sharpParams = {}
