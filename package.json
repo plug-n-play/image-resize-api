@@ -8,7 +8,9 @@
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "jasmine": "jasmine",
     "build": "npx tsc",
-    "test": "npm run build && npm run jasmine"
+    "test": "npm run build && npm run jasmine",
+    "dev": "nodemon src/index.ts",
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "Amandeep Singh",
@@ -16,6 +18,8 @@
     "@types/express": "^4.17.13",
     "@types/jasmine": "^4.0.3",
     "@types/node": "^18.0.3",
+    "@types/sharp": "^0.30.4",
+    "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "eslint": "^8.19.0",
@@ -23,12 +27,14 @@
     "eslint-plugin-prettier": "^4.2.1",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
+    "supertest": "^6.2.4",
     "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
   },
   "dependencies": {
     "express": "^4.18.1",
     "jasmine": "^4.2.1",
-    "jasmine-spec-reporter": "^7.0.0"
+    "jasmine-spec-reporter": "^7.0.0",
+    "sharp": "^0.30.7"
   }
 }
